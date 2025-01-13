@@ -826,7 +826,7 @@ static std::string dump_struct_vector_as_csv(std::vector<line_result> &v)
 {
     std::string outputstring;
     outputstring.reserve(v.size() * 256);
-    outputstring.append(csv_header);
+    // outputstring.append(csv_header);
     for (line_result &it : v)
     {
         if (isspace_or_empty(it.id) && isspace_or_empty(it.title))
