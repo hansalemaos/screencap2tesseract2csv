@@ -100,7 +100,7 @@ static constexpr std::string_view zero3 = ".0";
 static constexpr std::string_view zero4 = "-0";
 static constexpr std::string_view zero5 = "-0.0";
 static constexpr std::string_view zero6 = "+0.0";
-constexpr std::array<uint8_t, 256> array_ascii_replace_non_alphanumeric = {
+static constexpr std::array<uint8_t, 256> array_ascii_replace_non_alphanumeric{
     32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,
     32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,
     32,  32,  32,  32,  48,  49,  50,  51,  52,  53,  54,  55,  56,  57,  32,  32,  32,  32,  32,  32,  32,  65,
@@ -114,7 +114,7 @@ constexpr std::array<uint8_t, 256> array_ascii_replace_non_alphanumeric = {
     32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,
     32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32};
 
-constexpr std::array<uint8_t, 256> array_ascii_replace_non_printable = {
+static constexpr std::array<uint8_t, 256> array_ascii_replace_non_printable{
     32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,
     32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  33,  34,  35,  36,  37,  38,  39,  40,  41,  42,  43,
     44,  45,  46,  47,  48,  49,  50,  51,  52,  53,  54,  55,  56,  57,  58,  59,  60,  61,  62,  63,  64,  65,
@@ -127,7 +127,7 @@ constexpr std::array<uint8_t, 256> array_ascii_replace_non_printable = {
     32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,
     32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,
     32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32,  32};
-constexpr std::array<uint8_t, 256> array_ascii_replace_non_numeric = {
+static constexpr std::array<uint8_t, 256> array_ascii_replace_non_numeric{
     32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, // 0-15
     32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, // 16-31
     32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, // 32-47
@@ -145,7 +145,7 @@ constexpr std::array<uint8_t, 256> array_ascii_replace_non_numeric = {
     32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, // 218-233
     32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32  // 234-255
 };
-constexpr std::array<uint8_t, 256> array_ascii_replace_non_numeric_float = {
+static constexpr std::array<uint8_t, 256> array_ascii_replace_non_numeric_float{
     32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, // 0-15
     32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, // 16-31
     32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 46, 32, // 32-47
@@ -164,7 +164,7 @@ constexpr std::array<uint8_t, 256> array_ascii_replace_non_numeric_float = {
     32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32  // 234-255
 };
 
-constexpr std::array<uint8_t, 256> array_ascii_replace_non_numeric_float_with_comma = {
+static constexpr std::array<uint8_t, 256> array_ascii_replace_non_numeric_float_with_comma{
     32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, // 0-15
     32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, // 16-31
     32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 44, 32, 46, 32, // 32-47
