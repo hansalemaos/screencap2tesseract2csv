@@ -272,7 +272,7 @@ static std::variant<double, int64_t> to_float_or_int(std::string_view s)
     }
     return returnvalue;
 }
-bool check_if_string_is_valid_float_zero(const std::string_view str)
+static bool check_if_string_is_valid_float_zero(const std::string_view str)
 {
 
     if (is_float_number(str))
@@ -294,7 +294,7 @@ bool check_if_string_is_valid_float_zero(const std::string_view str)
     return false;
 }
 
-bool check_if_string_is_valid_int_zero(const std::string_view str)
+static bool check_if_string_is_valid_int_zero(const std::string_view str)
 {
 
     if ((str == zero1) || (str == zero2) || (str == zero3) || (str == zero4) || (str == zero5) || (str == zero6))
@@ -345,7 +345,7 @@ bool check_if_string_is_valid_int_zero(const std::string_view str)
     }
     return false;
 }
-int64_t convert_to_int_at_any_cost(const std::string_view _sv, int64_t nan_value)
+static int64_t convert_to_int_at_any_cost(const std::string_view _sv, int64_t nan_value)
 {
     std::variant<double, int64_t> tmpvalue = to_float_or_int(_sv);
     int64_t tmpnumber;
@@ -376,7 +376,7 @@ int64_t convert_to_int_at_any_cost(const std::string_view _sv, int64_t nan_value
 
     return nan_value;
 }
-double convert_to_double_at_any_cost(const std::string_view _sv, double nan_value)
+static double convert_to_double_at_any_cost(const std::string_view _sv, double nan_value)
 {
     std::variant<double, int64_t> tmpvalue = to_float_or_int(_sv);
     double tmpnumber;
@@ -454,7 +454,7 @@ static std::string normalize_whitespaces(const std::string_view &invecj)
 
     return outvecj;
 }
-std::string remove_whitespaces(const std::string_view invecj)
+static std::string remove_whitespaces(const std::string_view invecj)
 {
     std::string outvecj;
     outvecj.reserve(invecj.size());
@@ -470,7 +470,7 @@ std::string remove_whitespaces(const std::string_view invecj)
 
     return outvecj;
 }
-std::string replace_fu(const std::string_view s, int op)
+static std::string replace_fu(const std::string_view s, int op)
 {
     std::string outv;
     outv.reserve(s.size());
@@ -514,27 +514,27 @@ std::string replace_fu(const std::string_view s, int op)
     return outv;
 }
 
-std::string replace_non_alphanumeric_with_spaces(std::string_view _sv)
+static std::string replace_non_alphanumeric_with_spaces(std::string_view _sv)
 {
     return replace_fu(_sv, 0);
 }
-std::string replace_non_printable_with_spaces(std::string_view _sv)
+static std::string replace_non_printable_with_spaces(std::string_view _sv)
 {
     return replace_fu(_sv, 1);
 }
-std::string replace_non_decimal_with_spaces(std::string_view _sv)
+static std::string replace_non_decimal_with_spaces(std::string_view _sv)
 {
     return replace_fu(_sv, 2);
 }
-std::string replace_non_float_with_spaces(std::string_view _sv)
+static std::string replace_non_float_with_spaces(std::string_view _sv)
 {
     return replace_fu(_sv, 3);
 }
-std::string replace_non_float_with_spaces_and_comma(std::string_view _sv)
+static std::string replace_non_float_with_spaces_and_comma(std::string_view _sv)
 {
     return replace_fu(_sv, 4);
 }
-std::vector<std::pair<std::string, std::string>> parse_args_to_string_vector(int argc, char *argv[])
+static std::vector<std::pair<std::string, std::string>> parse_args_to_string_vector(int argc, char *argv[])
 {
     std::vector<std::pair<std::string, std::string>> args;
     args.reserve(argc);
