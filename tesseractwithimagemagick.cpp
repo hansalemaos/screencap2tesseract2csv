@@ -1830,5 +1830,6 @@ int main(int argc, char *argv[])
         }
     }
     std::cout << dump_struct_vector_as_csv(line_resultvec);
+    cleanup(myargs);
     return EXIT_SUCCESS;
 }
